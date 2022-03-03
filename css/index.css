@@ -48,7 +48,7 @@ video {
   color: white;
 }
 
-.time-select button, 
+.time-select button,
 .sound-picker button {
   color: white;
   width: 30%;
@@ -74,11 +74,11 @@ video {
   padding: 30px;
 }
 
-.sound-picker button:nth-child(1){
+.sound-picker button:nth-child(1) {
   background-color: #4972a1;
 }
 
-.sound-picker button:nth-child(2){
+.sound-picker button:nth-child(2) {
   background-color: #a14f49;
 }
 
@@ -89,4 +89,60 @@ video {
 .play {
   cursor: pointer;
   z-index: 10;
+}
+
+@media screen and (max-width: 1000px) {
+  video {
+    min-width: 350px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+  }
+  #app {
+    flex-direction: column;
+  }
+  .time-select,
+  .sound-picker,
+  .player-container {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .player-container svg {
+    position: absolute;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .time-display {
+    font-size: 25px;
+  }
+  .time-select button,
+  .sound-picker button {
+    color: white;
+    width: 30%;
+    height: 25%;
+    border: 1px solid white;
+    background: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  .sound-picker button {
+    height: 80px;
+    width: 80px;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+  }
+  .play {
+    width: 60px;
+  }
 }
